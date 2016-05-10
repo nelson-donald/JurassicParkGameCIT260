@@ -72,4 +72,22 @@ public class Drawable {
         texture[textureHeight-1][0] = "╚";
         texture[textureHeight-1][textureWidth-1] = "╝";
     }
+    
+    /**
+     * This function will draw the prepared texture to the main texture map
+     * 05/10/2016 - Donald Nelson - initial Coding
+     * @param s This is the variable that is the global texture map which is going to be drawn to the screen
+     * @param r this is the location of the row on the global map where the item should be drawn
+     * @param c this is the location of the col on the global map where the item should be drawn
+     * @return 
+     */
+    public String[][] Draw(String[][] s, int r, int c){
+        
+        for(int i = 0;i < textureHeight;i++){
+            for(int j = 0;j<textureWidth;j++){
+                s[i + r][j + c] = texture[i][j];
+            }
+        }
+        return s;
+    }
 }
