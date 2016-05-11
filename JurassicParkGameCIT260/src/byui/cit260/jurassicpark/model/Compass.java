@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package byui.cit260.jurassicpark.model;
+
+import Model.Item;
 
 /**
  *test
