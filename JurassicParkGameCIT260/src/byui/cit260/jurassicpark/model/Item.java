@@ -5,7 +5,7 @@
  */
 package byui.cit260.jurassicpark.model;
 
-import Model.Drawable;
+import byui.cit260.jurassicpark.model.Drawable;
 
 /**
  *

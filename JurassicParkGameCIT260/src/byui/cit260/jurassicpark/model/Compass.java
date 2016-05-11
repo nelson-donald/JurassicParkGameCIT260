@@ -5,7 +5,7 @@
  */
 package byui.cit260.jurassicpark.model;
 
-import Model.Item;
+import byui.cit260.jurassicpark.model.Item;
 
 /**
  *test
