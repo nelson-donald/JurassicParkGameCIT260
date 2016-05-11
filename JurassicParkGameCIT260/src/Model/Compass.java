@@ -6,7 +6,7 @@
 package Model;
 
 /**
- *
+ *test
  * @author Donald Nelson
  */
 public class Compass extends Item {
