@@ -12,5 +12,5 @@ import byui.cit260.jurassicpark.model.Drawable;
  * @author Donald Nelson
  */
 public class Item extends Drawable {
-    
+ 
 }
