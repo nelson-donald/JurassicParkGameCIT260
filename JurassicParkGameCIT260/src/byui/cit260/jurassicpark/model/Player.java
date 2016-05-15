@@ -6,25 +6,43 @@
 package byui.cit260.jurassicpark.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 /**
  *
- * @author igadg
+ * @author Kirstin Cutler, Donald Nelson
  */
 public class Player implements Serializable{
     
-    // class instance variables
+    ////////////////////////////////////////////////////////////////////////////
+    //Properties
+    
+    //The name of the player
     private String name;
+    
+    //The direction the player is facing
     private int direction;
+    
+    //The inventory
     private Inventory inventory;
+    
+    //The Location on the map where the player is currently
     private String[][] location;
 
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Constructor
     public Player() {
+        inventory = new Inventory();
+        
     }
     
 
+    ////////////////////////////////////////////////////////////////////////////
+    //Getter and Setter
     public String getName() {
         return name;
     }
@@ -57,6 +75,9 @@ public class Player implements Serializable{
         this.location = location;
     }
 
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Overrides
     @Override
     public int hashCode() {
         int hash = 3;

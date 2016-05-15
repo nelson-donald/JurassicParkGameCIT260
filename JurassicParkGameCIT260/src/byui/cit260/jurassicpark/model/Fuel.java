@@ -7,8 +7,31 @@ package byui.cit260.jurassicpark.model;
 
 /**
  *
- * @author joeyhendrix
+ * @author joeyhendrix, Donald Nelson
  */
-public class Fuel {
+public class Fuel extends Item {
     
+    ////////////////////////////////////////////////////////////////////////////
+    //Properties
+    
+    
+    
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Constructor
+    public Fuel(){
+        //This will initialize the item as drawable
+        initializeAsDrawable(1, 11);
+        
+        //This will reset the texture with a border
+        resetTexture();
+        
+        //Setup the item information
+        initialize(ItemType.Fuel, 1);
+    }
+    
+    
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Getter and Setter
 }

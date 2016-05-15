@@ -9,34 +9,73 @@ package byui.cit260.jurassicpark.model;
  *
  * @author Donald Nelson
  */
-public class Drawable {
+public abstract class Drawable {
     
+    ////////////////////////////////////////////////////////////////////////////
     //Properties
     
     //The texture array is used to set the drawable characters
-    String[][] texture = new String[1][1];
+    private String[][] texture = new String[1][1];
     
     //the textureWidth variable is used to store the width of the texture
-    int textureWidth = 1;
+    private int textureWidth = 1;
     
     //the textureHeight variable is used to store the height of the texture
-    int textureHeight = 1;
+    private int textureHeight = 1;
     
     //The bEnabled variable lets the functions know that the drawbale item
     //has been set up
-    Boolean bDrawableEnabled = false;
+    private boolean bDrawableEnabled = false;
+
     
     
+    ////////////////////////////////////////////////////////////////////////////
+    //Getter and Setter
+    
+    public String[][] getTexture( )
+    {
+        return texture;
+    }
+
+    public void setTexture(String[][] texture) {
+        this.texture = texture;
+    }
+
+    public int getTextureWidth() {
+        return textureWidth;
+    }
+
+    public void setTextureWidth(int textureWidth) {
+        this.textureWidth = textureWidth;
+    }
+
+    public int getTextureHeight() {
+        return textureHeight;
+    }
+
+    public void setTextureHeight(int textureHeight) {
+        this.textureHeight = textureHeight;
+    }
+
+    public boolean isbDrawableEnabled() {
+        return bDrawableEnabled;
+    }
+
+    public void setbDrawableEnabled(boolean bDrawableEnabled) {
+        this.bDrawableEnabled = bDrawableEnabled;
+    }
+    
+
+    ////////////////////////////////////////////////////////////////////////////
     //Functions
-        
+    
     /**
      * This function will initialize the variables of the drawable class and set the Enabled variable to true to let us know that we can use the other functions
      * 05/10/2016 - Donald Nelson - initial Coding
      * @param height the height in rows for the texture
      * @param width the  width in columns for the texture
      */
-    public void initializeAsDrawable(int height, int width )
-    {
+    public void initializeAsDrawable(int height, int width) {
         textureWidth = width;
         textureHeight = height;
         texture = new String[textureWidth][textureHeight];

@@ -7,8 +7,30 @@ package byui.cit260.jurassicpark.model;
 
 /**
  *
- * @author joeyhendrix
+ * @author joeyhendrix, Donald Nelson
  */
-public class Cloth {
+public class Cloth extends Item {
+    ////////////////////////////////////////////////////////////////////////////
+    //Properties
     
+    
+    
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Constructor
+    public Cloth(){
+        //This will initialize the item as drawable
+        initializeAsDrawable(1, 11);
+        
+        //This will reset the texture with a border
+        resetTexture();
+        
+        //Setup the item information
+        initialize(ItemType.Cloth, 1);
+    }
+    
+    
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Getter and Setter
 }

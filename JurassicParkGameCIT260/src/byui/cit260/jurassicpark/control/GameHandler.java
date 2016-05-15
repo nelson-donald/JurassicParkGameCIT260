@@ -3,38 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.jurassicpark.model;
-
-import byui.cit260.jurassicpark.model.Item;
+package byui.cit260.jurassicpark.control;
 
 /**
- *
+ * The purpose of this class is to handle all the control processing for the
+ * game. It will be filled out at a later date.
  * @author Donald Nelson
  */
-public class Compass extends Item {
+public class GameHandler {
+    
     
     ////////////////////////////////////////////////////////////////////////////
     //Properties
     
     
-    
-    
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
-    public Compass(){
-        //This will initialize the item as drawable
-        initializeAsDrawable(6, 11);
+    public GameHandler(){
         
-        //This will reset the texture with a border
-        resetTextureWithBorder();
-        
-        //Setup the item information
-        initialize(ItemType.Compass, 1);
     }
     
     
     
     ////////////////////////////////////////////////////////////////////////////
     //Getter and Setter
-    
 }
