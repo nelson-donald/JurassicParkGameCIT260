@@ -83,18 +83,5 @@ public class Inventory {
     ////////////////////////////////////////////////////////////////////////////
     //Functions
     
-    /**
-     * this method will attempt to create a torch.
-     * @return the text to display on the screen.
-     */
-    public String createTorch(){
-        if(cloth.getCount() >= 1 && fuel.getCount() >= 2 && stick.getCount() >= 1){
-            torch.add(new Torch());
-            return "A new torch has been created. You now have " + torch.size() + "torche(s)";
-        }
-        else
-        {
-            return "You do not have enough supplies to make a torch. You need 1 cloth, 1 stick and 2 fuel.";
-        }
-    }
+    
 }
