@@ -30,7 +30,7 @@ public class Player implements Serializable{
     private Inventory inventory;
     
     //The Location on the map where the player is currently
-    private String[][] location;
+    private Location location;
 
     
     ////////////////////////////////////////////////////////////////////////////
@@ -67,11 +67,11 @@ public class Player implements Serializable{
         this.inventory = inventory;
     }
 
-    public String[][] getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(String[][] location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 
@@ -84,7 +84,6 @@ public class Player implements Serializable{
         hash = 89 * hash + Objects.hashCode(this.name);
         hash = 89 * hash + this.direction;
         hash = 89 * hash + Objects.hashCode(this.inventory);
-        hash = 89 * hash + Arrays.deepHashCode(this.location);
         return hash;
     }
 
@@ -112,9 +111,6 @@ public class Player implements Serializable{
             return false;
         }
         if (!Objects.equals(this.inventory, other.inventory)) {
-            return false;
-        }
-        if (!Arrays.deepEquals(this.location, other.location)) {
             return false;
         }
         return true;
