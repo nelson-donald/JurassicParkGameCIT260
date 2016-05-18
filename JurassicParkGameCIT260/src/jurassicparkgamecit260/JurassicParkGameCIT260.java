@@ -23,7 +23,6 @@ public class JurassicParkGameCIT260 {
         p.setName("The Best Group. Pretty humble too.");
         p.setDirection(1);
         p.setInventory(new Inventory());
-        p.setLocation(new String[1][1]);
         
         System.out.println(p.toString());
     }
