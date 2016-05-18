@@ -13,7 +13,7 @@ public class Dinosaur {
     
     private int hitPoints;
     
-    //TODO maybe make this an enum - maybe
+    //TODO maybe make this an enum - maybe - probably not actually
     private String breed;
     
     private boolean carnivore;
