@@ -107,4 +107,6 @@ public class InventoryControl {
         stick.setCount(stick.getCount() + item.getCount());
         return "You now have " + stick.getCount() + " stick(s) in your inentory.";
     }
+    
+    
 }

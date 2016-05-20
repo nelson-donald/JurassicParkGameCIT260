@@ -3,28 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.jurassicpark.control;
+package byui.cit260.jurassicpark.view;
 
 /**
- * The purpose of this class is to handle all the control processing for the
- * game. It will be filled out at a later date.
+ *
  * @author Donald Nelson
  */
-public class GameHandler {
-    
-    
+public class InventoryMenuView extends View {
     ////////////////////////////////////////////////////////////////////////////
     //Properties
     
     
+    
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
-    public GameHandler(){
-        
-    }
+    
     
     
     
     ////////////////////////////////////////////////////////////////////////////
-    //Getter and Setter
+    //Functions
+    public boolean doAction(String selection) {
+
+        char charSel = selection.toUpperCase().charAt(0);
+        
+        switch (charSel) {
+            
+            case 'Q':
+                return true;
+            default:
+                console.println("Invalid option");
+                break;
+        }
+
+        return false;
+    }
 }
