@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,7 +8,7 @@ package byui.cit260.jurassicpark.model;
 
 /**
  *
- * @author igadg
+ * @author Donald Nelson
  */
 public class Dinosaur extends Item {
     ////////////////////////////////////////////////////////////////////////////
@@ -17,7 +18,9 @@ public class Dinosaur extends Item {
     //extinguishses itself.
     private int powerLevel;
     
+    private String breed;
     
+    private boolean carnivore;
     
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
@@ -26,7 +29,16 @@ public class Dinosaur extends Item {
          
     }
     
+    ////////////////////////////////////////////////////////////////////////////
+    //Functions
     
+    public boolean isHerbivore() {
+        return !carnivore;
+    }
+    
+    public boolean isCarnivore() {
+        return carnivore;
+    }
     
     ////////////////////////////////////////////////////////////////////////////
     //Getter and Setter
