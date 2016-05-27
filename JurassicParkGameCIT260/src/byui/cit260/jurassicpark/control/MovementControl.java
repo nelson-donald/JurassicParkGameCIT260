@@ -34,7 +34,9 @@ public class MovementControl {
     /**
      * This method will take the number of tourists in our inventory and
      * subtract it by the number power level or number of tourists this
-     * dinosaur kills
+     * dinosaur kills (This is what we designed in the test matrix but I feel
+     * like it should use the actual Inventory object and work directly with
+     * the byref object instead)
      * @param tourists
      * @param d
      * @return 
@@ -57,7 +59,7 @@ public class MovementControl {
         */
         result = tourists - d.getPowerLevel();
         
-        //return the result
+        //return the result which is the number of tourists left in the inventory
         return result;
     }
     
