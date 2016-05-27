@@ -63,6 +63,19 @@ public class MovementControlTest {
         
         result = instance.dinoEncounter(tourists, d);
         assertEquals(expResult, result);
+        
+        
+        //**********************************************************************
+        //TEST 4
+        //These are the input values.
+        tourists = 1;
+        d.setPowerLevel(-1);
+        
+        //This is the output value
+        expResult = -1;
+        
+        result = instance.dinoEncounter(tourists, d);
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
