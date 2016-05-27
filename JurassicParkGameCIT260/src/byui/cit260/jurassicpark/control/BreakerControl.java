@@ -7,7 +7,7 @@ package byui.cit260.jurassicpark.control;
 
 /**
  *
- * @author Donald Nelson
+ * @author Kirstin Cutler
  */
 public class BreakerControl {
     ////////////////////////////////////////////////////////////////////////////
@@ -29,5 +29,19 @@ public class BreakerControl {
     ////////////////////////////////////////////////////////////////////////////
     //Functions
     
+    /**
+     * This function calculates Ohms Law 
+     * @param amps
+     * @param volts
+     * @return 
+     */
+    public float validateOhmsLaw(float amps, float volts){
+if(amps <= 0) { return -1; }
+if(volts < 0) { return -1; }
+
+float resistance = volts / amps;
+return resistance;
+}
+
     
 }

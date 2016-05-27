@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author cutler24, Donald Nelson
+ * @author Kirstin Cutler, Donald Nelson
  */
 public class Inventory {
     
