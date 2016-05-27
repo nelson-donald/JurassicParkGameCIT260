@@ -7,19 +7,70 @@ package byui.cit260.jurassicpark.model;
 
 /**
  *
- * @author Daniel
+ * @author igadg
  */
 public class Location {
-    
-    private Item item;
-    
-    //TODO make this an enum when we learn about them.
-    private String type;
+    ////////////////////////////////////////////////////////////////////////////
+    //Properties
     
     private int row;
-    
     private int col;
+    private String description;
+    private Item item;
+    private Dinosaur dinosaur;
     
-    //TODO add any other properties that your locations might have
+    ////////////////////////////////////////////////////////////////////////////
+    //Constructor
+    public Location() {
+        
+        
+    }
+    
+
+    ////////////////////////////////////////////////////////////////////////////
+    //Getter and Setter
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public void setCol(int col) {
+        this.col = col;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
+    public Dinosaur getDinosaur() {
+        return dinosaur;
+    }
+
+    public void setDinosaur(Dinosaur dinosaur) {
+        this.dinosaur = dinosaur;
+    }
+    
+    
+    
     
 }

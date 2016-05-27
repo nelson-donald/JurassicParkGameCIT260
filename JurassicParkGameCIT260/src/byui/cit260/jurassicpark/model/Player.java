@@ -31,7 +31,6 @@ public class Player implements Serializable{
     
     //The Location on the map where the player is currently
     private Location location;
-
     
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
@@ -76,45 +75,26 @@ public class Player implements Serializable{
     }
 
     
+
+    
     ////////////////////////////////////////////////////////////////////////////
     //Overrides
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + this.direction;
-        hash = 89 * hash + Objects.hashCode(this.inventory);
-        return hash;
-    }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", direction=" + direction + ", inventory=" + inventory + ", location=" + location + '}';
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
-    
     @Override
     public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Player other = (Player) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (this.direction != other.direction) {
-            return false;
-        }
-        if (!Objects.equals(this.inventory, other.inventory)) {
-            return false;
-        }
-        return true;
+        return super.equals(obj); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
     
     

@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,21 +8,29 @@ package byui.cit260.jurassicpark.model;
 
 /**
  *
- * @author Daniel
+ * @author Donald Nelson
  */
-public class Dinosaur {
+public class Dinosaur extends Item {
+    ////////////////////////////////////////////////////////////////////////////
+    //Properties
     
-    private int hitPoints;
+    //This tells us how long the torch will last. how many moves before it
+    //extinguishses itself.
+    private int powerLevel;
     
-    //TODO maybe make this an enum - maybe - probably not actually
     private String breed;
     
     private boolean carnivore;
     
-    
-    public Dinosaur() {
+    ////////////////////////////////////////////////////////////////////////////
+    //Constructor
+    public Dinosaur(){
         
+         
     }
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Functions
     
     public boolean isHerbivore() {
         return !carnivore;
@@ -30,4 +39,18 @@ public class Dinosaur {
     public boolean isCarnivore() {
         return carnivore;
     }
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Getter and Setter
+
+    public int getPowerLevel() {
+        return powerLevel;
+    }
+
+    public void setPowerLevel(int powerLevel) {
+        this.powerLevel = powerLevel;
+    }
+
+    
+    
 }
