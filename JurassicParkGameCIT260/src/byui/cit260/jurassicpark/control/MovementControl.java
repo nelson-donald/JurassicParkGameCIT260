@@ -12,9 +12,53 @@ import byui.cit260.jurassicpark.model.Dinosaur;
  * @author igadg
  */
 public class MovementControl {
+    ////////////////////////////////////////////////////////////////////////////
+    //Properties
     
-    public void dinoEncounter(Dinosaur d)
+    
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Constructor
+    public MovementControl(){
+        
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    //Getter and Setter
+   
+    
+    
+    ////////////////////////////////////////////////////////////////////////////
+    //Functions
+    
+    /**
+     * This method will take the number of tourists in our inventory and
+     * subtract it by the number power level or number of tourists this
+     * dinosaur kills
+     * @param tourists
+     * @param d
+     * @return 
+     */
+    public int dinoEncounter(int tourists, Dinosaur d)
     {
+        if(tourists < d.getPowerLevel()) {
+            return -10;
+        }
+        if(d.getPowerLevel() < 0) {
+            return -1;
+        }
+        
+        //Declare a new function instance variable called result
+        int result;
+        
+        /*
+        Set the result = the number of tourists in the inventory - the dino
+        strentgh or number of tourists that get killed
+        */
+        result = tourists - d.getPowerLevel();
+        
+        //return the result
+        return result;
     }
     
     
