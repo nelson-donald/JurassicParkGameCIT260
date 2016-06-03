@@ -5,11 +5,14 @@
  */
 package byui.cit260.jurassicpark.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Donald Nelson
  */
-public class Game {
+public class Game implements Serializable
+{
     ////////////////////////////////////////////////////////////////////////////
     //Properties
     

@@ -6,6 +6,7 @@
 
 package byui.cit260.jurassicpark.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -13,7 +14,7 @@ import java.util.List;
  *
  * @author Kirstin Cutler, Donald Nelson
  */
-public class Inventory {
+public class Inventory implements Serializable {
     
     
     ////////////////////////////////////////////////////////////////////////////

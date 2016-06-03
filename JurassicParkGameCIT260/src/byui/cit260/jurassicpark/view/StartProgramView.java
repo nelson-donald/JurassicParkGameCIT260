@@ -88,28 +88,25 @@ public class StartProgramView {
         welcome = "=================================================" +
                 "\nWELCOME TO JURASSIC PARK" +
                 "\n" +
-                "\nSomeone has sabotoged the park and we need your" +
-                "\nhelp to get it back online and escape!" +
-                "\n"+
                 "\nFor almost a year now, people from all over the" +
                 "\nworld have visited our park to see these spectacular" +
                 "\ncreatures who have been extinct for millions of years." +
                 "\n" +
-                "\nEverything has run smoothly . . . until today." +
+                "\nEverything has run smoothly, until today." +
                 "\n" +
-                "\nYou are a newly hired tour guide, on your first day," +
+                "\nYou are a newly hired tour guide on your first day" +
                 "\nwho experiences one of the most horrific things" +
                 "\nmankind has ever seen before." +
                 "\n" +
                 "\nThere has been a massive power outage on the island" +
                 "\nand thousands of people, including you, are in panic." +
                 "\n" +
-                "\nWith the power out, cages can no longer hold these dinosaurs," +
-                "\nand a handful of them are already free!" +
+                "\nCages can no longer hold these dinosaurs and a handful" +
+                "\nof them have already found their way out." +
                 "\n" +
-                "\nYou are one of the last tour guides alive. " +
-                "\nYou need to find the power grid and get it back online " +
-                "\nwhile helping others to safety." +
+                "\nYou are one of the last tour guides who will need" +
+                "\nto find the power grid and get back online while" +
+                "\nhelping others to safety." +
                 "\n" +
                 "\nGood luck and be careful out there! A T-Rex has already" +
                 "\nbeen reported missing." +
@@ -127,4 +124,5 @@ public class StartProgramView {
         console.println("==============================");
         
     }
+    
 }
