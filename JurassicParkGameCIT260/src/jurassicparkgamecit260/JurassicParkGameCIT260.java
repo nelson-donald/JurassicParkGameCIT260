@@ -49,12 +49,12 @@ public class JurassicParkGameCIT260 {
             logFile = new PrintWriter(logPath);
             
             startProgram = new StartProgramView();
-            startProgram.startProgram();
+            startProgram.displayStartProgramView();
             
         }catch(Exception e){
             e.printStackTrace();           
             
-            startProgram.startProgram();
+            startProgram.displayStartProgramView();
         }finally{
             try{
                 if(inFile != null){

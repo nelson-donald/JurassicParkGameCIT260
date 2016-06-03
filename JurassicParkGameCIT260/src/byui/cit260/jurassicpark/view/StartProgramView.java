@@ -41,7 +41,7 @@ public class StartProgramView {
     ////////////////////////////////////////////////////////////////////////////
     //Function
 
-    public void startProgram() {
+    public void displayStartProgramView() {
         
         displayBanner();
         
@@ -124,4 +124,5 @@ public class StartProgramView {
         console.println("==============================");
         
     }
+    
 }
