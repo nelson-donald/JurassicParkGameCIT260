@@ -21,7 +21,8 @@ public class MainMenuView extends View {
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public MainMenuView() {
-        super("\n"
+        super("Main Menu"
+            + "\n"
             + "\nN - Start new game"
             + "\nL - Load saved game"
             + "\nS - Save current game"

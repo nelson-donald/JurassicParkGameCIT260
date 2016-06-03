@@ -19,7 +19,8 @@ public class HelpMenuView extends View {
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public HelpMenuView() {
-        super("\n"
+        super("Help Menu"
+            + "\n"
             + "\nA - About this game"
             + "\nH - How to play"
             + "\nO - Objective"
