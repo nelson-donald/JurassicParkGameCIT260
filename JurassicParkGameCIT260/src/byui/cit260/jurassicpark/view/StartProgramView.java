@@ -89,7 +89,7 @@ public class StartProgramView {
                 "\nWelcome to Jurassic Park" +
                 "\n" +
                 "\nSomeone has sabotoged the park and we need your" +
-                "\nhelp to get it back online and get escape." +
+                "\nhelp to get it back online and escape." +
                 "\n=================================================";
                 
         
