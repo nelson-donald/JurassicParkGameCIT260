@@ -69,7 +69,7 @@ public class HelpMenuView extends View {
     }
 
     private void objectives() {
-        console.println("Save as many people as you can. avoid the dinosaurs at al cost. turn back on the breaker. make a call for rescue.");
+        console.println("Save as many people as you can. Avoid the dinosaurs at all cost. Turn back on the breaker. Make a call for rescue.");
     }
 
     private void movementHelp() {
