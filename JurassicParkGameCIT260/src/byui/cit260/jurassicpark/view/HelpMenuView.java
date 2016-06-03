@@ -66,11 +66,23 @@ public class HelpMenuView extends View {
     }
 
     private void howToPlay() {
-        console.println("If you can't figure it out on your own ... ");
+        console.println("As you move through the park and encounter dinosaurs, some species "
+                + "\nwill endanger your life. In order to protect the tourists and yourself "
+                + "\nyou will need to collect cloth, sticks and fuel to make torches."
+                + "\nEach torch will only ward off one dinosaur and last for a certain "
+                + "\namount of time, so use it wisely."
+                + "\n"
+                + "\n In order to complete the game you must make it to the station "
+                + "\n with ?? tourists."
+        
+        );
     }
 
     private void objectives() {
-        console.println("Save as many people as you can. Avoid the dinosaurs at all cost. Turn back on the breaker. Make a call for rescue.");
+        console.println("Save as many people as you can. "
+                + "\nAvoid the dinosaurs at all cost. "
+                + "\nTurn back on the breaker. "
+                + "\nMake a call for rescue.");
     }
 
     private void movementHelp() {
