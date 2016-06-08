@@ -5,6 +5,10 @@
  */
 package byui.cit260.jurassicpark.view;
 
+import byui.cit260.jurassicpark.control.GameControl;
+import byui.cit260.jurassicpark.model.Player;
+import jurassicparkgamecit260.JurassicParkGameCIT260;
+
 /**
  *
  * @author Donald Nelson
@@ -20,6 +24,8 @@ public class GameMenuView extends View {
     //Constructor
     
     public GameMenuView() {
+        
+        
         super("\n"
             + "\nN - Move North"
             + "\nE - Move East"
@@ -27,6 +33,8 @@ public class GameMenuView extends View {
             + "\nW - Move West"
             + "\nI - Show my inventory"
             + "\nQ - Exit the help menu");
+        
+        
     }
     
     
@@ -47,6 +55,8 @@ public class GameMenuView extends View {
             case 'W':
                 break;
             case 'I':
+                //just to test that the save game stored my name
+                console.println(JurassicParkGameCIT260.getPlayer().getName());
                 break;
             case 'Q':
                 return true;
@@ -57,5 +67,6 @@ public class GameMenuView extends View {
 
         return false;
     }
-
+    
+    
 }

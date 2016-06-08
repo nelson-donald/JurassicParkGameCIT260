@@ -45,43 +45,13 @@ public class StartProgramView {
         
         displayBanner();
         
-        String playerName = getPlayerName();
         
-        Player player = GameControl.createPlayer(playerName);
-        
-        JurassicParkGameCIT260.setPlayer(player);
-        
-        displayWelcomeMessage(player.getName());
         
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
     }
     
-    public String getPlayerName() {
-        
-        boolean isValidName = false;
-        String name = "";
-        
-        console.println("Please enter your name: ");
-        
-        while(!isValidName) {
-            String input = "";
-            try {
-                input = keyboard.readLine();
-            } catch(Exception e) {
-                ErrorView.display(this.getClass().getName(), "Error reading input");
-            }
-            
-            if(input == null || input.length() >= 2) {
-                isValidName = true;
-                name = input;
-            } else {
-                console.println("Input is invalid - name must be at least 2 characters");
-            }
-        }
-        
-        return name;
-    }
+    
     
     public void displayBanner() {
         String welcome = "";
@@ -117,12 +87,6 @@ public class StartProgramView {
         console.println(welcome);
     }
     
-    public void displayWelcomeMessage(String playerName) {
-        console.println("==============================");
-        console.println("Welcome " + playerName + ".");
-        console.println("Enjoy the game!");
-        console.println("==============================");
-        
-    }
+    
     
 }

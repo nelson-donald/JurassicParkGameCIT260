@@ -5,11 +5,13 @@
  */
 package byui.cit260.jurassicpark.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author igadg
  */
-public class Location {
+public class Location implements Serializable {
     ////////////////////////////////////////////////////////////////////////////
     //Properties
     

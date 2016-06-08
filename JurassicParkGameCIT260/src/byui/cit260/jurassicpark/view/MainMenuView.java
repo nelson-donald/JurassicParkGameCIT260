@@ -6,6 +6,7 @@
 package byui.cit260.jurassicpark.view;
 
 import byui.cit260.jurassicpark.control.GameControl;
+import byui.cit260.jurassicpark.model.Player;
 import jurassicparkgamecit260.JurassicParkGameCIT260;
 
 /**
@@ -64,6 +65,14 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
+        
+        String playerName = getPlayerName();
+        
+        Player player = GameControl.createPlayer(playerName);
+        
+        JurassicParkGameCIT260.setPlayer(player);
+        
+        displayWelcomeMessage(player.getName());
         GameControl.createNewGame(JurassicParkGameCIT260.getPlayer());
         
         GameMenuView gameMenu = new GameMenuView();
@@ -96,4 +105,39 @@ public class MainMenuView extends View {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
+    
+    public String getPlayerName() {
+        
+        boolean isValidName = false;
+        String name = "";
+        
+        console.println("Please enter your name: ");
+        
+        while(!isValidName) {
+            String input = "";
+            try {
+                input = keyboard.readLine();
+            } catch(Exception e) {
+                ErrorView.display(this.getClass().getName(), "Error reading input");
+            }
+            
+            if(input == null || input.length() >= 2) {
+                isValidName = true;
+                name = input;
+            } else {
+                console.println("Input is invalid - name must be at least 2 characters");
+            }
+        }
+        
+        return name;
+    }
+
+    public void displayWelcomeMessage(String playerName) {
+        console.println("==============================");
+        console.println("Welcome " + playerName + ".");
+        console.println("Enjoy the game!");
+        console.println("==============================");
+        
+    }
+            
 }

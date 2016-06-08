@@ -6,13 +6,14 @@
 package byui.cit260.jurassicpark.model;
 
 import byui.cit260.jurassicpark.model.Drawable;
+import java.io.Serializable;
 
 
 /**
  *
  * @author Donald Nelson
  */
-public class Item extends Drawable {
+public class Item implements Serializable {
      
     
     ////////////////////////////////////////////////////////////////////////////
