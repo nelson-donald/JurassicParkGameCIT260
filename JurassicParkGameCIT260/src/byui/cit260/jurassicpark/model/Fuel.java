@@ -20,11 +20,7 @@ public class Fuel extends Item {
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public Fuel(){
-        //This will initialize the item as drawable
-        initializeAsDrawable(1, 11);
         
-        //This will reset the texture with a border
-        resetTexture();
         
         //Setup the item information
         initialize(ItemType.Fuel, 1);

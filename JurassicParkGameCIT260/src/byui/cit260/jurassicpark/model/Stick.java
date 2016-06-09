@@ -19,11 +19,7 @@ public class Stick extends Item {
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public Stick(){
-        //This will initialize the item as drawable
-        initializeAsDrawable(1, 11);
         
-        //This will reset the texture with a border
-        resetTexture();
         
         //Setup the item information
         initialize(ItemType.Stick, 1);

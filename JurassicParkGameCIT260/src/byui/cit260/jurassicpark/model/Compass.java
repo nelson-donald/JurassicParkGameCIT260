@@ -22,11 +22,7 @@ public class Compass extends Item {
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public Compass(){
-        //This will initialize the item as drawable
-        initializeAsDrawable(6, 11);
         
-        //This will reset the texture with a border
-        resetTextureWithBorder();
         
         //Setup the item information
         initialize(ItemType.Compass, 1);

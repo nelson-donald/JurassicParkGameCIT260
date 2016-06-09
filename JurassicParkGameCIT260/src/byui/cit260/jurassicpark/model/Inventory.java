@@ -7,6 +7,7 @@
 package byui.cit260.jurassicpark.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -38,7 +39,11 @@ public class Inventory implements Serializable {
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public Inventory(){
-        
+        compass = new Compass();
+        cloth=new Cloth();
+        fuel = new Fuel();
+        stick = new Stick();
+        torch = new ArrayList<Torch>();
     }
 
     ////////////////////////////////////////////////////////////////////////////

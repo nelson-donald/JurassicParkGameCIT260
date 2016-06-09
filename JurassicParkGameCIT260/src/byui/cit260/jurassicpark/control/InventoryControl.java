@@ -42,6 +42,7 @@ public class InventoryControl {
      * @return the text to display on the screen.
      */
     public String createTorch(Inventory i){
+        String result = "";
         if(i.getCloth().getCount() >= 1 && i.getFuel().getCount() >= 2 && i.getStick().getCount() >= 1){
             //We have enough items to make the torch
             i.getTorch().add(new Torch());
@@ -52,11 +53,34 @@ public class InventoryControl {
             removeCloth(i, 1);
             
             //Now return a message to the user that we succeeded
-            return "A new torch has been created. You now have " + i.getTorch().size() + "torche(s)";
+            result = ">A new torch has been created."
+                    + "\n>You now have " + i.getTorch().size() + "torche(s)"
+                    + "=================================================";
+            return result;
         }
         else
         {
-            return "You do not have enough supplies to make a torch. You need 1 cloth, 1 stick and 2 fuel.";
+            result = ">You do not have enough supplies to make a torch."
+            + "\n>You need 1 cloth, 1 stick and 2 fuel."
+                    + "\n=================================================";
+            return result;
+        }
+    }
+    
+    public String useTorch(Inventory i)
+    {
+        String result = "";
+        if(i.getTorch().size() >= 1){
+            //use torch. fix this later.
+            result = ">Torch has been lit."
+                    + "\n=================================================";
+            return result;
+        }
+        else
+        {
+            result = ">You do not have any torches to use."
+                    + "\n=================================================";
+            return result;
         }
     }
     

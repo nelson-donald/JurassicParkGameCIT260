@@ -55,7 +55,7 @@ public abstract class View implements ViewInterface {
         boolean validInput = false;
         
         while(!validInput){
-            console.println("\n" + this.displayMessage);
+            console.println( this.displayMessage);
             try {
                 input = keyboard.readLine();
             } catch(Exception e){

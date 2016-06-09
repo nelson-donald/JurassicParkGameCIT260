@@ -6,6 +6,8 @@
 package byui.cit260.jurassicpark.view;
 
 import byui.cit260.jurassicpark.control.GameControl;
+import byui.cit260.jurassicpark.control.MovementControl;
+import byui.cit260.jurassicpark.model.Inventory;
 import byui.cit260.jurassicpark.model.Player;
 import jurassicparkgamecit260.JurassicParkGameCIT260;
 
@@ -17,6 +19,7 @@ public class GameMenuView extends View {
     
     ////////////////////////////////////////////////////////////////////////////
     //Properties
+    private MovementControl movementControl = new MovementControl();
     
     
     
@@ -26,12 +29,17 @@ public class GameMenuView extends View {
     public GameMenuView() {
         
         
-        super("\n"
+        super(          
+           "\n================================================="
+            + "\n=                   Game Menu                   ="
+          + "\n================================================="
             + "\nN - Move North"
             + "\nE - Move East"
             + "\nS - Move South"
             + "\nW - Move West"
-            + "\nI - Show my inventory"
+            + "\nI - Inventory"
+            + "\nM - Show Map"
+            + "\nD - Describe this location"
             + "\nQ - Exit the help menu");
         
         
@@ -47,16 +55,25 @@ public class GameMenuView extends View {
         switch (charSel) {
             
             case 'N':
+                moveNorth();
                 break;
             case 'S':
+                moveSouth();
                 break;
             case 'E':
+                moveEast();
                 break;
             case 'W':
+                moveWest();
                 break;
             case 'I':
-                //just to test that the save game stored my name
-                console.println(JurassicParkGameCIT260.getPlayer().getName());
+                showInventory();
+                break;
+            case 'M':
+                showMap();
+                break;
+            case 'D':
+                showDescription();
                 break;
             case 'Q':
                 return true;
@@ -64,9 +81,39 @@ public class GameMenuView extends View {
                 console.println("Invalid option");
                 break;
         }
-
+showDescription();
         return false;
     }
-    
+    private void showDescription()
+    {
+        console.println(JurassicParkGameCIT260.getGame().getMap().getLocation(JurassicParkGameCIT260.getPlayer().getLocation().getRow(),JurassicParkGameCIT260.getPlayer().getLocation().getCol()).getDescription());
+    }
+    private void moveNorth(){
+        MovementControl move = new MovementControl();
+        console.println(move.moveNorth());
+        
+    }
+    private void moveSouth(){
+        MovementControl move = new MovementControl();
+        console.println(move.moveSouth());
+        
+    }
+    private void moveEast(){
+        MovementControl move = new MovementControl();
+        console.println(move.moveEast());
+    }
+    private void moveWest(){
+        
+        MovementControl move = new MovementControl();
+        console.println(move.moveWest());
+    }
+    private void showInventory(){
+        InventoryMenuView invMenuView = new InventoryMenuView();
+        invMenuView.display();
+        
+    }
+    private void showMap(){
+        
+    }
     
 }

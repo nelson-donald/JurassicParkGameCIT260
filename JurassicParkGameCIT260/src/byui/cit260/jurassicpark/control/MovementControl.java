@@ -6,6 +6,9 @@
 package byui.cit260.jurassicpark.control;
 
 import byui.cit260.jurassicpark.model.Dinosaur;
+import byui.cit260.jurassicpark.model.Location;
+import byui.cit260.jurassicpark.model.Map;
+import jurassicparkgamecit260.JurassicParkGameCIT260;
 
 /**
  *
@@ -63,5 +66,61 @@ public class MovementControl {
         return result;
     }
     
+    public String moveEast()
+    {
+        
+        Location l = JurassicParkGameCIT260.getPlayer().getLocation();
+        if(l.getCol() >= Map.NUM_COLS - 1)
+        {
+            return "You cannot move East.";
+        }
+        else
+        {
+            l.setCol(l.getCol() + 1);
+            JurassicParkGameCIT260.getPlayer().setLocation(l);
+            return "";
+        }
+    }
     
+    public String moveWest()
+    {
+        Location l = JurassicParkGameCIT260.getPlayer().getLocation();
+        if(l.getCol() == 0)
+        {
+            return "You cannot move West.";
+        }
+        else
+        {
+            l.setCol(l.getCol() - 1);
+            JurassicParkGameCIT260.getPlayer().setLocation(l);
+            return "";
+        }
+    }
+    public String moveSouth(){
+        Location l = JurassicParkGameCIT260.getPlayer().getLocation();
+        if(l.getRow() >= Map.NUM_ROWS - 1)
+        {
+            return "You cannot move South.";
+        }
+        else
+        {
+            l.setRow(l.getRow() + 1);
+            JurassicParkGameCIT260.getPlayer().setLocation(l);
+            return "";
+        }
+    }
+    
+    public String moveNorth(){
+        Location l = JurassicParkGameCIT260.getPlayer().getLocation();
+        if(l.getRow() == 0)
+        {
+            return "You cannot move North.";
+        }
+        else
+        {
+            l.setRow(l.getRow() - 1);
+            JurassicParkGameCIT260.getPlayer().setLocation(l);
+            return "";
+        }
+    }
 }
