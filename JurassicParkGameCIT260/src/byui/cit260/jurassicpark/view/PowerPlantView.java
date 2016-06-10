@@ -5,6 +5,8 @@
  */
 package byui.cit260.jurassicpark.view;
 
+import jurassicparkgamecit260.JurassicParkGameCIT260;
+
 /**
  *
  * @author Donald Nelson
@@ -17,6 +19,11 @@ public class PowerPlantView extends View {
     
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
+    public PowerPlantView() {
+        super("Power Plant"
+            + "\nP - Turn the power on"
+            + "\nQ - Exit the power plant");
+    }
     
     
     
@@ -28,7 +35,9 @@ public class PowerPlantView extends View {
         char charSel = selection.toUpperCase().charAt(0);
         
         switch (charSel) {
-            
+            case 'P':
+                powerOn();
+                break;
             case 'Q':
                 return true;
             default:
@@ -37,5 +46,14 @@ public class PowerPlantView extends View {
         }
 
         return false;
+    }
+
+    private void powerOn() {
+        if (JurassicParkGameCIT260.getGame().isParkPower()) {
+            console.println("Power is on");
+        } else {
+          PowerTestView ptv = new PowerTestView();
+          ptv.display();
+        }
     }
 }
