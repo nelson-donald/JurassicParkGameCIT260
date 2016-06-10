@@ -72,9 +72,6 @@ public class GameMenuView extends View {
             case 'M':
                 showMap();
                 break;
-            case 'D':
-                showDescription();
-                break;
             case 'Q':
                 return true;
             default:

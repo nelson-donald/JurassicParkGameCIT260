@@ -58,8 +58,7 @@ Location loc = new Location();
             }
         }
                 location[0][0].setDescription(">The tall grass spread throughout this valley"
-                + "\n>puts you and your tourists on edge."
-                + "\n>There is a dense forest to the south.");
+                + "\n>puts you and your tourists on edge.");
                 
                 location[0][1].setDescription(">There is a mix of tall grass and tropical"
                 + "\n>foliage. There is an electrical fense to the"
@@ -71,7 +70,9 @@ Location loc = new Location();
                 + "\n>makes the humidity that much more unbearable.");
                 
                 location[0][3].setDescription(">The car depot has been abandoned. Tools can"
-                        + "\n>be seen scattered throughout the shop");
+                        + "\n>be seen scattered throughout the shop."
+                + "\n>You can see a gas can sitting in the corner.");
+                location[0][3].setType(LocationType.CarDepot);
                 
                 location[0][4].setDescription(">Dense jungle makes it difficult to move.");
                 
@@ -86,6 +87,8 @@ Location loc = new Location();
                 location[1][4].setDescription("");
                 location[2][0].setDescription(">You find yourself inside of the Power Station."
                 + "\n> There must be something that we need to do.");
+                location[2][0].setType(LocationType.PowerStation);
+                
                 location[2][1].setDescription(">A large stone building can be seen to the"
                 + "\n>West. Warning signs about electrical current"
                 + "\n>can be seen posted everywhere. A door to the"

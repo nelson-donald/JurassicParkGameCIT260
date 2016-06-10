@@ -20,12 +20,13 @@ public class Location implements Serializable {
     private String description;
     private Item item;
     private Dinosaur dinosaur;
+    private LocationType type;
     
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public Location() {
-        
-        
+        //Default each location as generic
+        type = LocationType.Generic;
     }
     
 
@@ -70,6 +71,14 @@ public class Location implements Serializable {
 
     public void setDinosaur(Dinosaur dinosaur) {
         this.dinosaur = dinosaur;
+    }
+
+    public LocationType getType() {
+        return type;
+    }
+
+    public void setType(LocationType type) {
+        this.type = type;
     }
     
     
