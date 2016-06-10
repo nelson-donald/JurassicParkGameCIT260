@@ -22,13 +22,14 @@ public class Game implements Serializable
     
     private Map map;
 
-    
+    private boolean parkPower;
     
     
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public Game(){
-        
+    
+    parkPower = false;    
          
     }
     
@@ -51,6 +52,14 @@ public class Game implements Serializable
 
     public void setMap(Map map) {
         this.map = map;
+    }
+
+    public boolean isParkPower() {
+        return parkPower;
+    }
+
+    public void setParkPower(boolean parkPower) {
+        this.parkPower = parkPower;
     }
 
     

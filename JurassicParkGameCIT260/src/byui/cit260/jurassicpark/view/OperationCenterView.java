@@ -5,6 +5,8 @@
  */
 package byui.cit260.jurassicpark.view;
 
+import jurassicparkgamecit260.JurassicParkGameCIT260;
+
 /**
  *
  * @author Donald Nelson
@@ -17,7 +19,18 @@ public class OperationCenterView extends View{
     
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
-    
+     public OperationCenterView() {
+        
+        
+        super(          
+           "\n=================================================="
+            + "\n=              Operation Center               ="
+          + "\n================================================="
+            + "\nP - Make a phone call"       
+            + "\nQ - Exit the operation center");
+        
+        
+    }
     
     
     
@@ -28,7 +41,9 @@ public class OperationCenterView extends View{
         char charSel = selection.toUpperCase().charAt(0);
         
         switch (charSel) {
-            
+            case 'P':
+                makePhoneCall();
+                break;
             case 'Q':
                 return true;
             default:
@@ -38,4 +53,16 @@ public class OperationCenterView extends View{
 
         return false;
     }
+    private void makePhoneCall() {
+        if (JurassicParkGameCIT260.getGame().isParkPower() == true) {
+        PhoneCallView pcv = new PhoneCallView();  
+        pcv.display();
+        
+        } else {
+        
+            
+            
+        }
+    }
+    
 }
