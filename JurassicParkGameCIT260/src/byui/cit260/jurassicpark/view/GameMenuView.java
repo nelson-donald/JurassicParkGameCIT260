@@ -7,7 +7,9 @@ package byui.cit260.jurassicpark.view;
 
 import byui.cit260.jurassicpark.control.GameControl;
 import byui.cit260.jurassicpark.control.MovementControl;
+import byui.cit260.jurassicpark.model.Dinosaur;
 import byui.cit260.jurassicpark.model.Inventory;
+import byui.cit260.jurassicpark.model.Location;
 import byui.cit260.jurassicpark.model.Player;
 import jurassicparkgamecit260.JurassicParkGameCIT260;
 
@@ -88,21 +90,26 @@ showDescription();
     private void moveNorth(){
         MovementControl move = new MovementControl();
         console.println(move.moveNorth());
+        validateLocationAction();
         
     }
     private void moveSouth(){
         MovementControl move = new MovementControl();
         console.println(move.moveSouth());
+        validateLocationAction();
+        
         
     }
     private void moveEast(){
         MovementControl move = new MovementControl();
         console.println(move.moveEast());
+        validateLocationAction();
     }
     private void moveWest(){
         
         MovementControl move = new MovementControl();
         console.println(move.moveWest());
+        validateLocationAction();
     }
     private void showInventory(){
         InventoryMenuView invMenuView = new InventoryMenuView();
@@ -110,7 +117,39 @@ showDescription();
         
     }
     private void showMap(){
+        console.println(JurassicParkGameCIT260.getGame().getMap().getMapString());
+    }
+    
+    private void validateLocationAction()
+    {
+        console.println("1");
+        Location l = JurassicParkGameCIT260.getGame().getMap().getLocation(JurassicParkGameCIT260.getGame().getPlayer().getLocation().getRow(), JurassicParkGameCIT260.getGame().getPlayer().getLocation().getCol());
         
+        console.println(l.getType());
+        //First check to see if we are on a special location which will have no dinosaurs
+        switch (l.getType()){
+            case CarDepot:
+        console.println("1");
+                return;
+            case ControlCenter:
+                console.println("You are in the operation center");
+                OperationCenterView ocv = new OperationCenterView();
+                ocv.display();
+                return;
+            case PowerStation:
+                console.println("You are in the Power Station");
+                PowerPlantView ppv = new PowerPlantView();
+                ppv.display();
+                return;
+        }
+        
+        console.println("2");
+        //next make sure to check if we were attacked by a dinosaur
+        Dinosaur d = l.getDinosaur();
+        if( d != null)
+        {
+            console.println("you were atacked by a dinosaur");
+        }
     }
     
 }

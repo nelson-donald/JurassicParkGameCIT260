@@ -103,7 +103,8 @@ Location loc = new Location();
                 location[3][1].setDescription("");
                 location[3][2].setDescription("");
                 location[3][3].setDescription("");
-                location[3][4].setDescription("");
+                location[3][4].setDescription("Operations Center. We found it");
+                location[3][4].setType(LocationType.ControlCenter);
                 location[4][0].setDescription("");
                 location[4][1].setDescription("");
                 location[4][2].setDescription("");
@@ -119,7 +120,7 @@ Location loc = new Location();
             for (int col = 0; col < NUM_COLS; col++) {
                 
                 
-                rtn += "\t";
+                rtn += location[row][col].getType() + " ";
             }
             rtn += "\n";
         }

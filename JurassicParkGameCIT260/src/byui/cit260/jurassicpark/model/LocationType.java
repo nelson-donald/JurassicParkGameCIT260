@@ -10,7 +10,7 @@ package byui.cit260.jurassicpark.model;
  * @author igadg
  */
 
- enum LocationType{
+ public enum LocationType{
     PowerStation,
     ControlCenter,
     Generic,

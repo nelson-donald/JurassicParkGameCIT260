@@ -33,7 +33,10 @@ public class PowerTestView extends View {
     //Functions
     public boolean doAction(String selection) {
         BreakerControl bc = new BreakerControl();
-        if (selection == Float.toString(bc.validateOhmsLaw(20, 110))){
+        float expected = Float.parseFloat(selection);
+        float actual = bc.validateOhmsLaw(20, 110);
+        
+        if (Float.compare(expected, actual) == 0){
             console.println("The power is on");
             JurassicParkGameCIT260.getGame().setParkPower(true);
             return true;

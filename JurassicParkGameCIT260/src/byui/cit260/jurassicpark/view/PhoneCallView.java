@@ -37,7 +37,7 @@ public class PhoneCallView extends View {
 
     TelephoneRescueControl trc = new TelephoneRescueControl();
     
-    if (selection == Integer.toString(trc.validateAreaOfSquare(20, 15))) {
+    if (Integer.compare(Integer.parseInt(selection),trc.validateAreaOfSquare(20, 15)) == 0) {
      console.println("You win the game!");
         return true;
         
