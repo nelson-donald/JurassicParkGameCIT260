@@ -9,7 +9,7 @@ import jurassicparkgamecit260.JurassicParkGameCIT260;
 
 /**
  *
- * @author Donald Nelson
+ * @author joeyhendrix
  */
 public class OperationCenterView extends View{
     ////////////////////////////////////////////////////////////////////////////
@@ -60,7 +60,7 @@ public class OperationCenterView extends View{
         
         } else {
         
-            
+            console.println("You need to turn on the power on first.");
             
         }
     }
