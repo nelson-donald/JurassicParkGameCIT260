@@ -11,7 +11,7 @@ import jurassicparkgamecit260.JurassicParkGameCIT260;
  *
  * @author Donald Nelson
  */
-public class ErrorView {
+public class ErrorView extends View {
     ////////////////////////////////////////////////////////////////////////////
     //Properties
     
@@ -22,9 +22,9 @@ public class ErrorView {
     
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
-    
-    
-    
+    public ErrorView(){
+        super("");
+    }
     
     ////////////////////////////////////////////////////////////////////////////
     //Functions
@@ -37,6 +37,9 @@ public class ErrorView {
         logFile.println(className + " - " + errorMsg);
     }
 
-    
+    public boolean doAction(String selection) {
+
+        return true;
+    }
     
 }
