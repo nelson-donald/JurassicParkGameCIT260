@@ -79,12 +79,18 @@ Location loc = new Location();
                 location[1][0].setDescription(">A large stone building can be seen to the"
                 + "\n>South. Warning signs about electical current"
                 + "\n>can be seen posted everywhere. A door to the"
-                        + "\n>building is South");
+                + "\n>building is South");
                 
-                location[1][1].setDescription("");
-                location[1][2].setDescription("");
-                location[1][3].setDescription("");
-                location[1][4].setDescription("");
+                location[1][1].setDescription(">An electrical fence to the North has a hole"
+                + "\n>in it. Some dinosaurs may have escaped.");
+                location[1][2].setDescription(">You hear a T-Rex roar nearby"
+                + "\n>and stumble across a fresh footprint in the mud."
+                + "\n> You need to get out of here, quick!");
+                location[1][3].setDescription(">What an amazing creature!"
+                + "\n>Although he's an herbivore, you can still get crushed"
+                + "\n>so don't admire him too much!");
+                location[1][4].setDescription(">You found a sign that says the Operations Center"
+                + "\n>is just south of here.");
                 location[2][0].setDescription(">You find yourself inside of the Power Station."
                 + "\n> There must be something that we need to do.");
                 location[2][0].setType(LocationType.PowerStation);
@@ -93,23 +99,42 @@ Location loc = new Location();
                 + "\n>West. Warning signs about electrical current"
                 + "\n>can be seen posted everywhere. A door to the"
                 + "\n>building is West.");
-                location[2][2].setDescription("");
-                location[2][3].setDescription("");
-                location[2][4].setDescription("");
+                location[2][2].setDescription(">You have encountered a T-Rex!"
+                        + "\n>Now you need to rely on your speed"
+                        + "\n>to get out of this one! RUN!");
+                location[2][3].setDescription(">A pack of raptors is nearby, looking for food."
+                        + "\n>They seem to be blocking the Operation Center's north entrance.");
+                location[2][4].setDescription(">Raptors everywhere!"
+                        + "\n>>You will need to find another entrance!");
                 location[3][0].setDescription(">A large stone building can be seen to the"
                 + "\n>North. Warning signs about electical current"
                 + "\n>can be seen posted everywhere. A door to the"
-                        + "\n>building is North");
-                location[3][1].setDescription("");
-                location[3][2].setDescription("");
-                location[3][3].setDescription("");
+                        + "\n>building is North from here");
+                location[3][1].setDescription(">A brontosaurus ran through here"
+                        + "\n>leveling some large trees in its path."
+                        + "\n>You found some shattered pieces of a tree trunk.");
+                location[3][2].setDescription(">The bloody remains from a dinosaur fight are all"
+                        + "\n>that's left around here. Stay out of sight if you can.");
+                location[3][3].setDescription(">You found a sign that says the Operation Center"
+                        + "\n>is just east of here."
+                        + "\n>Watch out for raptors!");
                 location[3][4].setDescription("Operations Center. We found it");
                 location[3][4].setType(LocationType.ControlCenter);
-                location[4][0].setDescription("");
-                location[4][1].setDescription("");
-                location[4][2].setDescription("");
-                location[4][3].setDescription("");
-                location[4][4].setDescription("");
+                location[4][0].setDescription(">It looks like someone fled by ATV but never"
+                        + "\n>made it out alive."
+                        + "\n>There's a quarter tank of fuel left.");
+                location[4][1].setDescription(">It may be tempting, but you can't run away yet!"
+                        + "\n>The world is counting on you to complete your tasks!");
+                location[4][2].setDescription(">You reached the shore and all you can see for miles"
+                        + "\n>is the vastness of the blue ocean."
+                        + "\n>You may be safe here for now, but it's only a matter of time"
+                        + "\n>before they find you.");
+                location[4][3].setDescription(">That Operation Center should be around here somewhere!"
+                        + "\n>You also just found some tourists hiding in the bushes."
+                        + "\n>One is badly injured, so you will need to get help fast!");
+                location[4][4].setDescription(">You just lost your injured tourist."
+                        + "\n>What a tragedy!"
+                        + "\n>Get out of here quick before you lose anyone else!");
     }
 
     public String getMapString() {
