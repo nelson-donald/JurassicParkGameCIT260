@@ -5,6 +5,7 @@
  */
 package byui.cit260.jurassicpark.control;
 
+import byui.cit260.jurassicpark.exceptions.MovementControlException;
 import byui.cit260.jurassicpark.model.Dinosaur;
 import byui.cit260.jurassicpark.model.Location;
 import byui.cit260.jurassicpark.model.Map;
@@ -66,61 +67,55 @@ public class MovementControl {
         return result;
     }
     
-    public String moveEast()
+    public void moveEast() throws MovementControlException
     {
         
         Location l = JurassicParkGameCIT260.getPlayer().getLocation();
         if(l.getCol() >= Map.NUM_COLS - 1)
         {
-            return "You cannot move East.";
+            throw new MovementControlException( "You cannot move East.");
         }
-        else
-        {
+        
             l.setCol(l.getCol() + 1);
             JurassicParkGameCIT260.getPlayer().setLocation(l);
-            return "";
-        }
+           
     }
     
-    public String moveWest()
+    public void moveWest() throws MovementControlException
     {
         Location l = JurassicParkGameCIT260.getPlayer().getLocation();
         if(l.getCol() == 0)
         {
-            return "You cannot move West.";
+            throw new MovementControlException( "You cannot move West.");
         }
-        else
-        {
+        
             l.setCol(l.getCol() - 1);
             JurassicParkGameCIT260.getPlayer().setLocation(l);
-            return "";
-        }
+            
     }
-    public String moveSouth(){
+    public void moveSouth() throws MovementControlException
+    {
         Location l = JurassicParkGameCIT260.getPlayer().getLocation();
         if(l.getRow() >= Map.NUM_ROWS - 1)
         {
-            return "You cannot move South.";
+            throw new MovementControlException( "You cannot move South.");
         }
-        else
-        {
+        
             l.setRow(l.getRow() + 1);
             JurassicParkGameCIT260.getPlayer().setLocation(l);
-            return "";
-        }
+            
     }
     
-    public String moveNorth(){
+    public void moveNorth() throws MovementControlException
+    {
         Location l = JurassicParkGameCIT260.getPlayer().getLocation();
         if(l.getRow() == 0)
         {
-            return "You cannot move North.";
+            throw new MovementControlException( "You cannot move North.");
         }
-        else
-        {
+        
             l.setRow(l.getRow() - 1);
             JurassicParkGameCIT260.getPlayer().setLocation(l);
-            return "";
-        }
+            
     }
 }

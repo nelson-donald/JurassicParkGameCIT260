@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.jurassicpark.model;
+package byui.cit260.jurassicpark.enums;
 
 /**
  *This enum tells us the types of items available. no other item types can
@@ -15,7 +15,7 @@ package byui.cit260.jurassicpark.model;
  * An enum of the possible items in the game.
  * @author Donald Nelson
  */
-enum ItemType{
+public enum ItemType{
     Cloth,
     Compass,
     Fuel,

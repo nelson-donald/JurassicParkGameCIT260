@@ -5,6 +5,7 @@
  */
 package byui.cit260.jurassicpark.model;
 
+import byui.cit260.jurassicpark.enums.LocationType;
 import java.io.Serializable;
 
 /**

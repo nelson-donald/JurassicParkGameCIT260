@@ -5,6 +5,8 @@
  */
 package byui.cit260.jurassicpark.model;
 
+import byui.cit260.jurassicpark.enums.ItemType;
+
 /**
  *
  * @author joeyhendrix, Donald Nelson

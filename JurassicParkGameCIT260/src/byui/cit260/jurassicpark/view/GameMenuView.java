@@ -7,6 +7,7 @@ package byui.cit260.jurassicpark.view;
 
 import byui.cit260.jurassicpark.control.GameControl;
 import byui.cit260.jurassicpark.control.MovementControl;
+import byui.cit260.jurassicpark.exceptions.MovementControlException;
 import byui.cit260.jurassicpark.model.Dinosaur;
 import byui.cit260.jurassicpark.model.Inventory;
 import byui.cit260.jurassicpark.model.Location;
@@ -89,26 +90,47 @@ showDescription();
     }
     private void moveNorth(){
         MovementControl move = new MovementControl();
-        console.println(move.moveNorth());
+        try{
+            move.moveNorth();
+        }
+        catch(MovementControlException ex){
+            console.println(ex.getMessage());
+        }
         validateLocationAction();
         
     }
     private void moveSouth(){
         MovementControl move = new MovementControl();
-        console.println(move.moveSouth());
+        try{
+            move.moveSouth();
+        }
+        catch(MovementControlException ex){
+            console.println(ex.getMessage());
+        }
         validateLocationAction();
         
         
     }
     private void moveEast(){
         MovementControl move = new MovementControl();
-        console.println(move.moveEast());
+        try{
+            move.moveEast();
+        }
+        catch(MovementControlException ex){
+            console.println(ex.getMessage());
+        }
+        
         validateLocationAction();
     }
     private void moveWest(){
         
         MovementControl move = new MovementControl();
-        console.println(move.moveWest());
+        try{
+            move.moveWest();
+        }
+        catch(MovementControlException ex){
+            console.println(ex.getMessage());
+        }
         validateLocationAction();
     }
     private void showInventory(){
@@ -122,14 +144,11 @@ showDescription();
     
     private void validateLocationAction()
     {
-        console.println("1");
         Location l = JurassicParkGameCIT260.getGame().getMap().getLocation(JurassicParkGameCIT260.getGame().getPlayer().getLocation().getRow(), JurassicParkGameCIT260.getGame().getPlayer().getLocation().getCol());
         
-        console.println(l.getType());
         //First check to see if we are on a special location which will have no dinosaurs
         switch (l.getType()){
             case CarDepot:
-        console.println("1");
                 return;
             case ControlCenter:
                 console.println("You are in the operation center");
@@ -143,7 +162,6 @@ showDescription();
                 return;
         }
         
-        console.println("2");
         //next make sure to check if we were attacked by a dinosaur
         Dinosaur d = l.getDinosaur();
         if( d != null)

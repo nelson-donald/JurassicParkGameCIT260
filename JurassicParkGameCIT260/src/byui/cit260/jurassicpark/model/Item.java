@@ -5,7 +5,7 @@
  */
 package byui.cit260.jurassicpark.model;
 
-import byui.cit260.jurassicpark.model.Drawable;
+import byui.cit260.jurassicpark.enums.ItemType;
 import java.io.Serializable;
 
 
