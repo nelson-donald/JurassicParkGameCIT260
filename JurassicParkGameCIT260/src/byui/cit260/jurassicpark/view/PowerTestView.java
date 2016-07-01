@@ -6,6 +6,7 @@
 package byui.cit260.jurassicpark.view;
 
 import byui.cit260.jurassicpark.control.BreakerControl;
+import byui.cit260.jurassicpark.exceptions.BreakerControlException;
 import jurassicparkgamecit260.JurassicParkGameCIT260;
 
 /**
@@ -33,16 +34,21 @@ public class PowerTestView extends View {
     //Functions
     public boolean doAction(String selection) {
         BreakerControl bc = new BreakerControl();
-        float expected = Float.parseFloat(selection);
-        float actual = bc.validateOhmsLaw(20, 110);
-        
-        if (Float.compare(expected, actual) == 0){
-            console.println("The power is on");
+        try{
+        boolean result = bc.validateOhmsLaw(selection, 5.5f);
+        if(result){console.println("The power is on");
             JurassicParkGameCIT260.getGame().setParkPower(true);
-            return true;
-        }
-            console.println("Wrongo Bongo!");
+            return true;}
+        else{console.println("That is incorrect");
+        return false;}
+        
+        }catch(BreakerControlException ex)
+        {
+        console.println(ex.getMessage());
         return false;
+        }
+        
+            
     }
 
     
