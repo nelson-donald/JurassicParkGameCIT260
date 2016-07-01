@@ -6,6 +6,7 @@
 package byui.cit260.jurassicpark.view;
 
 import byui.cit260.jurassicpark.control.TelephoneRescueControl;
+import byui.cit260.jurassicpark.exceptions.TelephoneRescueControlException;
 
 /**
  *
@@ -36,14 +37,23 @@ public class PhoneCallView extends View {
     public boolean doAction(String selection) {
 
     TelephoneRescueControl trc = new TelephoneRescueControl();
-    
-    if (Integer.compare(Integer.parseInt(selection),trc.validateAreaOfSquare(20, 15)) == 0) {
-     console.println("You win the game!");
+    try{
+        boolean result = trc.validateAreaOfSquare(selection, 20, 15);
+        if(result){
+            console.println("You win the game!");
         return true;
+        }
+        else{console.println("That is incorrect");
+        return false;}
         
-    } 
-    console.println("Wrong Answer.");
+        }catch(TelephoneRescueControlException ex)
+        {
+        console.println(ex.getMessage());
         return false;
+        }
+    
+    
+   
     }
     
     

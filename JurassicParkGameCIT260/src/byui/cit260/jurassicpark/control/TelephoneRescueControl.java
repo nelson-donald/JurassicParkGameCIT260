@@ -5,6 +5,8 @@
  */
 package byui.cit260.jurassicpark.control;
 
+import byui.cit260.jurassicpark.exceptions.TelephoneRescueControlException;
+
 /**
  *
  * @author joeyhendrix
@@ -53,8 +55,24 @@ public int validateAreaOfSquare( int width, int height ) {
 
 return area;
 }
-
-
+ public boolean validateAreaOfSquare(String guess,int width, int height) throws 
+            TelephoneRescueControlException {
+            try{
+            int expected = Integer.parseInt(guess);
+            int actual = validateAreaOfSquare(width, height);
+            if (Integer.compare(expected, actual) == 0){
+            return true;
+            }
+            else
+            {
+                return false;
+                
+            }
+            }catch(NumberFormatException ex) 
+            {
+            throw new TelephoneRescueControlException("A numerical value is required");
+            }
+    }   
         
         
         
