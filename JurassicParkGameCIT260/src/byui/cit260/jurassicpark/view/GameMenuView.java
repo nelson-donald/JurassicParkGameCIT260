@@ -94,7 +94,8 @@ showDescription();
             move.moveNorth();
         }
         catch(MovementControlException ex){
-            console.println(ex.getMessage());
+            
+                ErrorView.display(this.getClass().getName(), ex.getMessage());
         }
         validateLocationAction();
         
@@ -105,7 +106,8 @@ showDescription();
             move.moveSouth();
         }
         catch(MovementControlException ex){
-            console.println(ex.getMessage());
+            
+                ErrorView.display(this.getClass().getName(), ex.getMessage());
         }
         validateLocationAction();
         
@@ -117,7 +119,8 @@ showDescription();
             move.moveEast();
         }
         catch(MovementControlException ex){
-            console.println(ex.getMessage());
+            
+                ErrorView.display(this.getClass().getName(), ex.getMessage());
         }
         
         validateLocationAction();
@@ -129,7 +132,8 @@ showDescription();
             move.moveWest();
         }
         catch(MovementControlException ex){
-            console.println(ex.getMessage());
+            
+                ErrorView.display(this.getClass().getName(), ex.getMessage());
         }
         validateLocationAction();
     }

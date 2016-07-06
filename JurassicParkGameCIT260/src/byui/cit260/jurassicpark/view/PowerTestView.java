@@ -35,7 +35,7 @@ public class PowerTestView extends View {
     public boolean doAction(String selection) {
         BreakerControl bc = new BreakerControl();
         try{
-        boolean result = bc.validateOhmsLaw(selection, 5.5f);
+        boolean result = bc.validateOhmsLaw(selection, 20f, 110f );
         if(result){console.println("The power is on");
             JurassicParkGameCIT260.getGame().setParkPower(true);
             return true;}
@@ -44,7 +44,7 @@ public class PowerTestView extends View {
         
         }catch(BreakerControlException ex)
         {
-        console.println(ex.getMessage());
+                ErrorView.display(this.getClass().getName(), ex.getMessage());
         return false;
         }
         

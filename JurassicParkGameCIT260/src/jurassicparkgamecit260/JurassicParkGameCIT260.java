@@ -9,6 +9,7 @@ package jurassicparkgamecit260;
 import byui.cit260.jurassicpark.model.Game;
 import byui.cit260.jurassicpark.model.Inventory;
 import byui.cit260.jurassicpark.model.Player;
+import byui.cit260.jurassicpark.view.ErrorView;
 import byui.cit260.jurassicpark.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -33,6 +34,8 @@ public class JurassicParkGameCIT260 {
     
     private static PrintWriter logFile;
     
+    private static ErrorView error;
+    
     
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
@@ -42,6 +45,7 @@ public class JurassicParkGameCIT260 {
     public static void main(String[] args) {
         
         StartProgramView startProgram = null;
+        error = new ErrorView();
         try{
             inFile = new BufferedReader(new InputStreamReader(System.in));
             outFile = new PrintWriter(System.out, true);
@@ -66,9 +70,8 @@ public class JurassicParkGameCIT260 {
                 if(logFile != null){
                     logFile.close();
                 }
-            }catch(Exception e)
+            }catch(Exception ex)
             {
-                System.out.println("Error closing files");
             }
         }
         

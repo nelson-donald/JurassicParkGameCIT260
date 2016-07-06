@@ -6,6 +6,7 @@
 package byui.cit260.jurassicpark.control;
 
 import byui.cit260.jurassicpark.exceptions.BreakerControlException;
+import byui.cit260.jurassicpark.view.ErrorView;
 
 /**
  *
@@ -45,10 +46,11 @@ float resistance = volts / amps;
 return resistance;
 }
 
-    public boolean validateOhmsLaw(String guess,float actual) throws 
+    public boolean validateOhmsLaw(String guess,float amps, float volts) throws 
             BreakerControlException {
             try{
             float expected = Float.parseFloat(guess);
+            float actual = calculateOhmsLaw(amps, volts);
             if (Float.compare(expected, actual) == 0){
             return true;
         }
@@ -59,7 +61,9 @@ return resistance;
             }
             }catch(NumberFormatException ex) 
             {
-            throw new BreakerControlException("A numerical value is required");
+                ErrorView.display(this.getClass().getName(),"Error validating Ohms Law: " + ex.getMessage());
+               
+                throw new BreakerControlException("A numerical value is required");
             }
     }    
 }

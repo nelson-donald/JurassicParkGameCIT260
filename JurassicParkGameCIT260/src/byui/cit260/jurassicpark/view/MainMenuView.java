@@ -87,7 +87,7 @@ public class MainMenuView extends View {
             GameMenuView gmv = new GameMenuView();
             gmv.display();
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "Error on input");
+            ErrorView.display(this.getClass().getName(), "Error loading game");
         }
     }
 
@@ -97,7 +97,7 @@ public class MainMenuView extends View {
             String fileName = keyboard.readLine();
             GameControl.saveGame(fileName);
         } catch (Exception e) {
-            ErrorView.display(this.getClass().getName(), "Error on input");
+            ErrorView.display(this.getClass().getName(), "Error saving game");
         }
     }
 
@@ -118,7 +118,7 @@ public class MainMenuView extends View {
             try {
                 input = keyboard.readLine();
             } catch(Exception e) {
-                ErrorView.display(this.getClass().getName(), "Error reading input");
+                ErrorView.display(this.getClass().getName(), "Error getting player name");
             }
             
             if(input == null || input.length() >= 2) {
