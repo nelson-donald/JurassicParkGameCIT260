@@ -152,7 +152,9 @@ showDescription();
         
         //First check to see if we are on a special location which will have no dinosaurs
         switch (l.getType()){
-            case CarDepot:
+            case CarDepot:console.println("You are in the car depot");
+                CarDepotView cdv = new CarDepotView();
+                cdv.display();
                 return;
             case ControlCenter:
                 console.println("You are in the operation center");

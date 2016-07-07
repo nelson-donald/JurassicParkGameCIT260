@@ -55,7 +55,7 @@ public class InventoryControl {
             //Now return a message to the user that we succeeded
             result = ">A new torch has been created."
                     + "\n>You now have " + i.getTorch().size() + "torche(s)"
-                    + "=================================================";
+                    + "\n=================================================";
             return result;
         }
         else
@@ -126,10 +126,10 @@ public class InventoryControl {
      * @param item this is the item class from the item we just found on the map
      * @return this will return a string to output to the user about what just happened
      */
-    public String addStick(Inventory i, Item item){
-        Item stick = i.getStick();
-        stick.setCount(stick.getCount() + item.getCount());
-        return "You now have " + stick.getCount() + " stick(s) in your inentory.";
+    public String addFuel(Inventory i, Item item){
+        Item fuel = i.getFuel();
+        fuel.setCount(fuel.getCount() + item.getCount());
+        return "You now have " + fuel.getCount() + " fuel in your inentory.";
     }
     
     

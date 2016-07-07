@@ -24,9 +24,13 @@ public class InventoryMenuView extends View {
     
     public InventoryMenuView()
     {
-        
-        
-        super("=                   Inventory                   ="
+        super("");
+        updateDisplayMessage();
+    }
+    
+    private String updateDisplayMessage()
+    {
+    displayMessage =     "=                   Inventory                   ="
         + "\n================================================="
         + "\nWe have a compass. Lets try not to get lost."
         + "\nTotal Cloth:\t" + JurassicParkGameCIT260.getPlayer().getInventory().getCloth().getCount()
@@ -37,10 +41,10 @@ public class InventoryMenuView extends View {
             + "\n"
             + "\nC - Create Torch"
             + "\nU - Use Torch"
-            + "\nQ - Exit Inventory");
-        
-    }
+            + "\nQ - Exit Inventory";
     
+    return displayMessage;
+    }
     
     ////////////////////////////////////////////////////////////////////////////
     //Functions
@@ -69,11 +73,13 @@ public class InventoryMenuView extends View {
         InventoryControl invControl = new InventoryControl();
         String s = invControl.createTorch(JurassicParkGameCIT260.getPlayer().getInventory());
         console.println(s);
+        updateDisplayMessage();
     }
     
     private void useTorch(){
         InventoryControl invControl = new InventoryControl();
         String s = invControl.useTorch(JurassicParkGameCIT260.getPlayer().getInventory());
         console.println(s);
+        updateDisplayMessage();
     }
 }
