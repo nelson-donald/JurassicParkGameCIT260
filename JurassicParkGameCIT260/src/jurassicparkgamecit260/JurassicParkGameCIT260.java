@@ -34,7 +34,6 @@ public class JurassicParkGameCIT260 {
     
     private static PrintWriter logFile;
     
-    private static ErrorView error;
     
     
     ////////////////////////////////////////////////////////////////////////////
@@ -45,10 +44,10 @@ public class JurassicParkGameCIT260 {
     public static void main(String[] args) {
         
         StartProgramView startProgram = null;
-        error = new ErrorView();
         try{
             inFile = new BufferedReader(new InputStreamReader(System.in));
             outFile = new PrintWriter(System.out, true);
+            
             String logPath = "log.txt";
             logFile = new PrintWriter(logPath);
             

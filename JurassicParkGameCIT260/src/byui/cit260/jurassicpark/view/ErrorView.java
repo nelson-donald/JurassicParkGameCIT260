@@ -30,11 +30,11 @@ public class ErrorView extends View {
     //Functions
     
     public static void display(String className, String errorMsg){
+        logFile.println(className + " - " + errorMsg);
         errorFile.println("---------------------------" +
                 "\nERROR: " + errorMsg +
                 "\n---------------------------");
         
-        logFile.println(className + " - " + errorMsg);
     }
 
     public boolean doAction(String selection) {
