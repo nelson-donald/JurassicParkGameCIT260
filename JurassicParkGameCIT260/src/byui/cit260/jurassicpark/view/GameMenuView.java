@@ -42,6 +42,7 @@ public class GameMenuView extends View {
             + "\nW - Move West"
             + "\nI - Inventory"
             + "\nM - Show Map"
+            + "\nP - Print Map to File"
             + "\nD - Describe this location"
             + "\nQ - Exit the help menu");
         
@@ -74,6 +75,9 @@ public class GameMenuView extends View {
                 break;
             case 'M':
                 showMap();
+                break;
+            case 'P':
+                printMap();
                 break;
             case 'Q':
                 return true;
@@ -174,6 +178,11 @@ showDescription();
         {
             console.println("you were atacked by a dinosaur");
         }
+    }
+
+    private void printMap() {
+        PrintMapView pmv = new PrintMapView();
+        pmv.display();
     }
     
 }

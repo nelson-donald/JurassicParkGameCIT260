@@ -1,0 +1,7 @@
+	1		2		3		4		5
+1	Generic		Generic		Generic		CarDepot		Generic		
+0	Generic		Generic		Generic		Generic		Generic		
+1	PowerStation		Generic		Generic		Generic		Generic		
+2	Generic		Generic		Generic		Generic		ControlCenter		
+3	Generic		Generic		Generic		Generic		Generic		
+4	

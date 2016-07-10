@@ -140,15 +140,16 @@ Location loc = new Location();
 
     public String getMapString() {
 
-        String rtn = "";
+        String rtn = "Jurassic Park Island Map\r\n,1,2,3,4,5\r\n";
 
         for (int row = 0; row < NUM_ROWS; row++) {
+            rtn += Integer.toString(row + 1) + ",";
             for (int col = 0; col < NUM_COLS; col++) {
                 
                 
-                rtn += location[row][col].getType() + " ";
+                rtn += location[row][col].getType() + ",";
             }
-            rtn += "\n";
+            rtn += "\r\n";
         }
 
         return rtn;
