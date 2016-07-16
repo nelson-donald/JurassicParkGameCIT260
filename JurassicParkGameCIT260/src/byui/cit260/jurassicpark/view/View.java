@@ -39,6 +39,7 @@ public abstract class View implements ViewInterface {
     public void display(){
         boolean done = false;
         do{
+            try{
             String value = this.getInput();
             if(value.toUpperCase().equals("Q")){
                 return;
@@ -46,6 +47,11 @@ public abstract class View implements ViewInterface {
             
             console.println(this.newPage);
             done = this.doAction(value);
+            }
+            catch(Exception e)
+            {
+                console.println(e.getMessage());
+            }
         } while (!done);
     }
     

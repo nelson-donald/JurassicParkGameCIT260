@@ -1,0 +1,27 @@
+                       
+                       
+                       
+                       
+    \                 /
+    .\               / 
+    ..\             /   
+    ...\           /    
+    ....\         /    
+    .... \       /     
+    ....  \     /      
+    ....   \   /       
+    ....               
+    ....               
+    ....               
+    ....   /   \       
+    ....  /xxxxx\      
+    .... /xxxxxxx\     
+    ..../xxxxxxxxx\    
+    .../xxxxxxxxxxxx\   
+    ../xxxxxxxxxxxxxx\      
+    ./xxxxxxxxxxxxxxxx\ 
+    /xxxxxxxxxxxxxxxxx\    
+    xxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxx

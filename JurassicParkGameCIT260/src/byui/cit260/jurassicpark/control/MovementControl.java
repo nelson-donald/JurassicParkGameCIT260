@@ -7,6 +7,7 @@ package byui.cit260.jurassicpark.control;
 
 import byui.cit260.jurassicpark.exceptions.MovementControlException;
 import byui.cit260.jurassicpark.model.Dinosaur;
+import byui.cit260.jurassicpark.model.Inventory;
 import byui.cit260.jurassicpark.model.Location;
 import byui.cit260.jurassicpark.model.Map;
 import jurassicparkgamecit260.JurassicParkGameCIT260;
@@ -45,26 +46,23 @@ public class MovementControl {
      * @param d
      * @return 
      */
-    public int dinoEncounter(int tourists, Dinosaur d)
+    public void dinoEncounter(Inventory i, Dinosaur d) throws Exception
     {
-        if(tourists < d.getPowerLevel()) {
-            return -10;
+        
+        if(i.getTourists() < d.getPowerLevel()) {
+            throw new Exception("You lose the game. you ran out of tourists to save.");
         }
         if(d.getPowerLevel() < 0) {
-            return -1;
+            throw new Exception("Error in the coding. Exiting the game. We deserve an a- instead of an A.");
         }
         
-        //Declare a new function instance variable called result
-        int result;
         
         /*
         Set the result = the number of tourists in the inventory - the dino
         strentgh or number of tourists that get killed
         */
-        result = tourists - d.getPowerLevel();
+        i.setTourists(i.getTourists() - d.getPowerLevel());
         
-        //return the result which is the number of tourists left in the inventory
-        return result;
     }
     
     public void moveEast() throws MovementControlException

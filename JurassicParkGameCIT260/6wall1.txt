@@ -1,0 +1,27 @@
+                           
+                           
+                           
+                   ________
+    |              ....|   
+    |              ....|   
+    |              ....|    
+    |__            ....|    
+    |  |\         /....|   
+    |  | \       / ....|   
+    |  |  \     /  ....|   
+    |  |   \   /   ....|   
+    |  |           ....|   
+    |  |           ....|   
+    |  |           ....|   
+    |  |   /   \   ....|   
+    |  |  /xxxxx\  ....|   
+    |  | /xxxxxxx\ ....|   
+    |__|/xxxxxxxxx\....|   
+    |xxxxxxxxxxxxxx....|   
+    |xxxxxxxxxxxxxx....|       
+    |xxxxxxxxxxxxxx....|   
+    |xxxxxxxxxxxxxx____|___       
+    xxxxxxxxxxxxxxxxxxxxxxx   
+    xxxxxxxxxxxxxxxxxxxxxxx  
+    xxxxxxxxxxxxxxxxxxxxxxx 
+    xxxxxxxxxxxxxxxxxxxxxxx

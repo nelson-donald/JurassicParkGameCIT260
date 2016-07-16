@@ -71,6 +71,7 @@ public class InventoryControl {
     {
         String result = "";
         if(i.getTorch().size() >= 1){
+            i.setActiveTorch(true);
             //use torch. fix this later.
             result = ">Torch has been lit."
                     + "\n=================================================";
@@ -132,5 +133,8 @@ public class InventoryControl {
         return "You now have " + fuel.getCount() + " fuel in your inentory.";
     }
     
-    
+    public boolean isTorchInUse(Inventory i)
+    {
+        return i.isActiveTorch();
+    }
 }

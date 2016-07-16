@@ -36,6 +36,11 @@ public class Inventory implements Serializable {
     //this will store the torches
     private List<Torch> torch;
     
+    //Tells us whether we have a torch in use
+    private boolean activeTorch;
+    
+    private int tourists;
+    
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public Inventory(){
@@ -44,6 +49,8 @@ public class Inventory implements Serializable {
         fuel = new Fuel();
         stick = new Stick();
         torch = new ArrayList<Torch>();
+        activeTorch = false;
+        tourists = 10;
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -84,10 +91,24 @@ public class Inventory implements Serializable {
         return torch;
     }
 
+    public void setActiveTorch(boolean activeTorch) {
+        this.activeTorch = activeTorch;
+    }
+
     
+    public boolean isActiveTorch() {
+        return activeTorch;
+    }
     
+    public int getTourists(){
+        return tourists;
+    }
+    
+    public void setTourists(int val){
+       this.tourists = val;
+    }
     ////////////////////////////////////////////////////////////////////////////
     //Functions
-    
+
     
 }

@@ -52,8 +52,8 @@ public class PowerPlantView extends View {
         if (JurassicParkGameCIT260.getGame().isParkPower()) {
             console.println("Power is on");
         } else {
-          PowerTestView ptv = new PowerTestView();
-          ptv.display();
+            DungeonView dv = new DungeonView();
+            dv.display();
         }
     }
 }

@@ -6,6 +6,7 @@
 package byui.cit260.jurassicpark.view;
 
 import byui.cit260.jurassicpark.control.GameControl;
+import byui.cit260.jurassicpark.control.InventoryControl;
 import byui.cit260.jurassicpark.control.MovementControl;
 import byui.cit260.jurassicpark.exceptions.MovementControlException;
 import byui.cit260.jurassicpark.model.Dinosaur;
@@ -166,9 +167,20 @@ showDescription();
                 ocv.display();
                 return;
             case PowerStation:
+                InventoryControl ic = new  InventoryControl();
+                        
+                if(ic.isTorchInUse( JurassicParkGameCIT260.getGame().getPlayer().getInventory())){
+                    
+                
                 console.println("You are in the Power Station");
                 PowerPlantView ppv = new PowerPlantView();
                 ppv.display();
+                }
+                else
+                {
+                    
+                console.println("It's too dark to go inside. We need more light.");
+                }
                 return;
         }
         
@@ -177,7 +189,19 @@ showDescription();
         if( d != null)
         {
             console.println("you were atacked by a dinosaur");
+            MovementControl move = new MovementControl();
+        try
+        {
+            move.dinoEncounter(JurassicParkGameCIT260.getGame().getPlayer().getInventory(), l.getDinosaur());
         }
+        catch(Exception ex)
+        {
+                console.println( ex.getMessage());
+            System.exit(0);
+        }
+        console.println("You now have only " + JurassicParkGameCIT260.getGame().getPlayer().getInventory().getTourists() + " tourists left.");
+        }
+        
     }
 
     private void printMap() {

@@ -65,6 +65,7 @@ Location loc = new Location();
                 + "\n>foliage. There is an electrical fense to the"
                 + "\n>south with a hole. The Dinosaurs probably"
                 + "\n>broke out through there");
+                location[0][1].setDinosaur(new Dinosaur(3));
                 
                 location[0][2].setDescription(">A beautiful waterfall cascades down the"
                 + "\n>cliffside to the south. The mist in the air"
@@ -90,9 +91,12 @@ Location loc = new Location();
                 location[1][3].setDescription(">What an amazing creature!"
                 + "\n>Although he's an herbivore, you can still get crushed"
                 + "\n>so don't admire him too much!");
+                location[1][3].setDinosaur(new Dinosaur(0));
+                
+                
                 location[1][4].setDescription(">You found a sign that says the Operations Center"
                 + "\n>is just south of here.");
-                location[2][0].setDescription(">You find yourself inside of the Power Station."
+                location[2][0].setDescription(">You find yourself near the Power Station."
                 + "\n> There must be something that we need to do.");
                 location[2][0].setType(LocationType.PowerStation);
                 
@@ -103,6 +107,8 @@ Location loc = new Location();
                 location[2][2].setDescription(">You have encountered a T-Rex!"
                         + "\n>Now you need to rely on your speed"
                         + "\n>to get out of this one! RUN!");
+                location[2][2].setDinosaur(new Dinosaur(3));
+                
                 location[2][3].setDescription(">A pack of raptors is nearby, looking for food."
                         + "\n>They seem to be blocking the Operation Center's north entrance.");
                 location[2][4].setDescription(">Raptors everywhere!"
@@ -136,6 +142,7 @@ Location loc = new Location();
                 location[4][4].setDescription(">You just lost your injured tourist."
                         + "\n>What a tragedy!"
                         + "\n>Get out of here quick before you lose anyone else!");
+                location[4][4].setDinosaur(new Dinosaur(1));
     }
 
     public String getMapString() {

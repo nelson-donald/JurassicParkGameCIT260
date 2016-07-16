@@ -15,7 +15,7 @@ public abstract class Drawable {
     //Properties
     
     //The texture array is used to set the drawable characters
-    private String[][] texture = new String[1][1];
+    public String[][] texture = new String[1][1];
     
     //the textureWidth variable is used to store the width of the texture
     private int textureWidth = 1;
@@ -78,7 +78,7 @@ public abstract class Drawable {
     public void initializeAsDrawable(int height, int width) {
         textureWidth = width;
         textureHeight = height;
-        texture = new String[textureWidth][textureHeight];
+        texture = new String[textureHeight][textureWidth];
         bDrawableEnabled = true;
     }
     
@@ -89,11 +89,16 @@ public abstract class Drawable {
     public void resetTexture()
     {
         //Clear the memory
-        texture = null;
+        //texture = null;
         
         //Reinstantiate the array
-        texture = new String[textureWidth][textureHeight];
+        //texture = new String[textureHeight][textureWidth];
         
+        for(int i = 0;i < textureHeight;i++){
+            for(int j = 0;j<textureWidth;j++){
+                texture[i][j] = " ";
+            }
+        }
     }
     
     /**
@@ -120,7 +125,7 @@ public abstract class Drawable {
      * @param c this is the location of the col on the global map where the item should be drawn
      * @return 
      */
-    public String[][] Draw(String[][] s, int r, int c){
+    public String[][] draw(String[][] s, int r, int c){
         
         for(int i = 0;i < textureHeight;i++){
             for(int j = 0;j<textureWidth;j++){

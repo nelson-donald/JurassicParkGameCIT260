@@ -32,11 +32,15 @@ public class Player implements Serializable{
     //The Location on the map where the player is currently
     private Location location;
     
+    private int[][] dungeonLocation = new int[1][2];
+    
     ////////////////////////////////////////////////////////////////////////////
     //Constructor
     public Player() {
         inventory = new Inventory();
-        
+        direction=2;
+        dungeonLocation[0][0] = 5;
+        dungeonLocation[0][1] = 7;
     }
     
 
@@ -72,6 +76,14 @@ public class Player implements Serializable{
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+    
+    public int[][] getDungeonLocation() {
+        return dungeonLocation;
+    }
+
+    public void setDungeonLocation(int x, int y, int location) {
+        this.dungeonLocation[x][y] = location;
     }
 
     

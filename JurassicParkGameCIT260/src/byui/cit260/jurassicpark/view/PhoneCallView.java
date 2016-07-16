@@ -41,6 +41,7 @@ public class PhoneCallView extends View {
         boolean result = trc.validateAreaOfSquare(selection, 20, 15);
         if(result){
             console.println("You win the game!");
+            System.exit(0);
         return true;
         }
         else{console.println("That is incorrect");
@@ -48,7 +49,7 @@ public class PhoneCallView extends View {
         
         }catch(TelephoneRescueControlException ex)
         {
-        console.println(ex.getMessage());
+                ErrorView.display(this.getClass().getName(), ex.getMessage());
         return false;
         }
     
