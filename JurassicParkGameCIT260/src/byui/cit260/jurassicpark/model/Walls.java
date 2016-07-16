@@ -81,7 +81,6 @@ public class Walls extends Drawable {
         
         //First check that the space in front of us is a wall
         if(VisibleWalls[1][1] == 1){
-            System.out.println("middle closed");
             SetView2(1);
             SetView3(1);
             SetView4(1);
@@ -105,7 +104,7 @@ public class Walls extends Drawable {
             }
         }
         else if(VisibleWalls[0][1] == 1){
-            System.out.println("middle kind of closed");
+            
             SetView3(2);
             SetView4(2);
             SetView5(2);
@@ -140,7 +139,6 @@ public class Walls extends Drawable {
                 SetView7(0);
             }
         }else{
-            System.out.println("middle open");
             SetView4(0);
             if(VisibleWalls[2][0]==1)
             {

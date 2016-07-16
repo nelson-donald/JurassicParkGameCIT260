@@ -24,8 +24,9 @@ public class Menu extends Drawable {
         items.add( new MenuItem("W - Move Forward"));
         items.add(new MenuItem("A - Turn Left"));
         items.add(new MenuItem("D - Turn Right"));
+        items.add(new MenuItem("Q - Quit"));
         
-        initializeAsDrawable(9, 18);
+        initializeAsDrawable(10, 18);
             
     }
     

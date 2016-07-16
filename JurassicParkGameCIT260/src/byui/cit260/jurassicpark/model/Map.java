@@ -62,7 +62,7 @@ Location loc = new Location();
                 + "\n>puts you and your tourists on edge.");
                 
                 location[0][1].setDescription(">There is a mix of tall grass and tropical"
-                + "\n>foliage. There is an electrical fense to the"
+                + "\n>foliage. There is an electrical fence to the"
                 + "\n>south with a hole. The Dinosaurs probably"
                 + "\n>broke out through there");
                 location[0][1].setDinosaur(new Dinosaur(3));

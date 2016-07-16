@@ -5,11 +5,13 @@
  */
 package byui.cit260.jurassicpark.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Donald Nelson
  */
-public abstract class Drawable {
+public abstract class Drawable implements Serializable {
     
     ////////////////////////////////////////////////////////////////////////////
     //Properties

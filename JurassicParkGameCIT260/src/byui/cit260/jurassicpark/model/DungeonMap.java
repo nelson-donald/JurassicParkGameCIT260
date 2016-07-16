@@ -21,8 +21,11 @@ public class DungeonMap extends Drawable {
     
     public DungeonMap()
     {
+        //Initialize my drawable objects and set their size
         this.initializeAsDrawable(29,50);
         compass.initializeAsDrawable(6,11);
+        walls.initializeAsDrawable(27,27);
+        
         gameMap = new int[][]{
         {1,1,1,1,1,1,1,1,1,1,1},
         {1,1,1,1,1,1,1,1,1,1,1},
@@ -36,7 +39,6 @@ public class DungeonMap extends Drawable {
         {1,1,1,1,1,1,1,1,1,1,1}
     };
         
-        walls.initializeAsDrawable(27,27);
     }
     
     public void process()

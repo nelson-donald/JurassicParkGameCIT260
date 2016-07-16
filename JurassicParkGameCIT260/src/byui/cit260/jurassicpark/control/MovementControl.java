@@ -53,7 +53,7 @@ public class MovementControl {
             throw new Exception("You lose the game. you ran out of tourists to save.");
         }
         if(d.getPowerLevel() < 0) {
-            throw new Exception("Error in the coding. Exiting the game. We deserve an a- instead of an A.");
+            throw new Exception("Error in the coding. Exiting the game. We deserve an A- instead of an A.");
         }
         
         
